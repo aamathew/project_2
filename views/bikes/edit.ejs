@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+
+
+
+<h3>Edit Bike</h3>
+<form action="/bikes/<%= bike.id %>?_method=PUT" method="POST">
+  <label>Name: <input type="text" name="name" value="<%= bike.name %>"/> </label><br />
+  <label>Make: <input type="text" name="make" value="<%= bike.make %>"/> </label><br />
+  <label>Model: <input type="text" name="model" value="<%= bike.model %>" /> </label><br />
+  <label>Year: <input type="number" name="year" value="<%= bike.year %>" min="2018" max="2023" /> </label
+  ><br />
+  <label
+    >Color:
+    <select name="color"  >
+      <option value="Red" <%= bike.color === "Red" ? "selected" : "" %>>Red</option>
+      <option value="Blue" <%= bike.color === "Blue" ? "selected" : "" %> >Blue</option>
+      <option value="Silver" <%= bike.color === "Silver" ? "selected" : "" %>>Silver</option>
+      <option value="Black" <%= bike.color === "Black" ? "selected" : "" %>>Black</option>
+      <option value="White" <%= bike.color === "White" ? "selected" : "" %>>White</option>
+    </select> </label
+  ><br />
+  <button type="submit">Save Bike</button>
+</form>
+
+
+<%- include('../partials/footer') %>
