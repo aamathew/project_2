@@ -1,42 +1,11 @@
-<%- include('../partials/header') %>
-
-<table>
-  <thead>
-    <th></th>
-    <th>Name</th>
-    <th>Make</th>
-    <th>Model</th>
-    <th>Year</th>
-    <th>Color</th>
-  </thead>
-  <tbody>
-    <% bikes.forEach(function(b) {%>
-    <tr>
-      <td>
-        <form
-          action="/bikes/<%=b.id%>?_method=DELETE"
-          method="POST"
-          class="buttons">
-          <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
-        </form>
-        <a href="/bikes/<%=b.id%>/edit"
-          ><button type="submit">
-            <i class="fa-regular fa-pen-to-square"></i></button
-        ></a>
-      </td>
-
-      <td><%= b.name %></td>
-
-      <td><%= b.make %></td>
-
-      <td><%= b.model %></td>
-
-      <td><%= b.year %></td>
-
-      <td><%= b.color %></td>
-    </tr>
-    <% }) %>
-  </tbody>
-</table>
-
-<%- include('../partials/footer') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Home Page
+</body>
+</html>
